@@ -1,19 +1,21 @@
 class a{
-    void dis(){
+    a(){
         System.out.println("parent class");
 
     }
 
 }
 class b extends a{
-    void dis(){
+    b(){
         System.out.println("child class");
-        super.dis();
+        super();
+
     }
 }
 public class superkw {
     public static void main(String[] args){
         b obj=new b();
-        obj.dis();
+
+
     }
 }
