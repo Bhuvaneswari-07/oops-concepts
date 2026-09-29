@@ -19,28 +19,44 @@ class student {
     }
 
     void display() {
-        System.out.println("Name: " + name);
         System.out.println("Roll: " + roll);
+        System.out.println("Name: " + name);
         System.out.println("Average: " + average);
 
-        if (average > 45) {
-            System.out.println("Pass");
+        if (average >= 40) {
+            System.out.println("PASS");
         } else {
-            System.out.println("Fail");
+            System.out.println("FAIL");
         }
+    }
+
+    // Method overloading
+    void display(String message) {
+        System.out.println(message);
+        display();
     }
 }
 
 public class inheritance4 {
     public static void main(String[] args) {
 
-        student s1 = new student(1, "bhuvana", 100, 30, 90);
-        student s2 = new student(2, "lallu", 100, 100, 100);
+        student s1 = new student(1, "Bhuvana", 100, 30, 90);
+        student s2 = new student(2, "Lallu", 100, 100, 100);
+        student s3 = new student(3, "Ravi", 20, 30, 25);
 
-        s1.avg();
-        s1.display();
+        student arr[] = new student[3];
 
-        s2.avg();
-        s2.display();
+        arr[0] = s1;
+        arr[1] = s2;
+        arr[2] = s3;
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].avg();
+            arr[i].display();
+            System.out.println();
+        }
+
+        // Calling overloaded method
+        s1.display("Student Result:");
     }
 }
