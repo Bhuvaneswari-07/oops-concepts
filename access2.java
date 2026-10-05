@@ -3,7 +3,7 @@ class Student2 {
 
     int marks = 90;
 }
-//package p2;
+
 //import p1.Student2;
 
 public class access2 {
